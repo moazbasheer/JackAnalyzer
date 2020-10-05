@@ -148,7 +148,7 @@ public class JackTokenizer {
 		return Constants.IDENTIFIER;
 	}
 	
-	public int keyword(){
+    public int keyword(){
         if (currentToken.equals("class")) { return Constants.CLASS; }
         else if (currentToken.equals("method")) { return Constants.METHOD; }
         else if (currentToken.equals("function")) { return Constants.FUNCTION; }
