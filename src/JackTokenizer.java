@@ -24,8 +24,7 @@ public class JackTokenizer {
 		fileContent = "";
 		cursor = 0;
 		map = new HashMap<>();
-		/*writer = new FileWriter(new File(filename.split("[.]")[0] + "T.xml"));
-		writer.write("<tokens>\n");*/
+        
 		while (scan.hasNext()) {
 			String temp = scan.nextLine();
 			if(temp.length() > 2 && temp.substring(0,2).equals("//")){
