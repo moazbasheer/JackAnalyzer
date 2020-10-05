@@ -618,7 +618,7 @@ public class CompilationEngine {
 			if(tokenizer.symbol().equals(")")){
 				output.write(indentation + tokenizer.getTag() + "\n");
 				tokenizer.advance();
-			}else{
+			}else{ 
 				System.out.println("Error in )");
 				return ;
 			}
