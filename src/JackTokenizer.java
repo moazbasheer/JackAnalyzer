@@ -171,7 +171,7 @@ public class JackTokenizer {
         else if (currentToken.equals("null")) { return Constants.NULL; }
         else if (currentToken.equals("this")) { return Constants.THIS; }
         else { return -1; }
-	}
+    }
 	
 	public String symbol(){
 		if (tokenType() != Constants.SYMBOL) { return "Error"; }
