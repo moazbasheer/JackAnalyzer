@@ -269,9 +269,7 @@ public class CompilationEngine {
 				return ;
 			}
 		}
-		
-		//System.out.println("no more statements keyword" + " " + tokenizer.getToken());
-		
+				
 		indentation = indentation.substring(0,indentation.length() - 2);
 		output.write(indentation + "</statements>\n");
 	}
