@@ -148,6 +148,7 @@ public class JackTokenizer {
 		
 		return Constants.IDENTIFIER;
 	}
+	
 	public int keyword(){
         if (currentToken.equals("class")) { return Constants.CLASS; }
         else if (currentToken.equals("method")) { return Constants.METHOD; }
@@ -172,6 +173,7 @@ public class JackTokenizer {
         else if (currentToken.equals("this")) { return Constants.THIS; }
         else { return -1; }
 	}
+	
 	public String symbol(){
 		if (tokenType() != Constants.SYMBOL) { return "Error"; }
         if (currentToken.equals("<")) { return "&lt;"; }
@@ -179,14 +181,17 @@ public class JackTokenizer {
         else if (currentToken.equals("&")) { return "&amp;"; }
         else { return new String(currentToken); }
 	}
+	
 	public String stringVal(){
 		if (tokenType() != Constants.STRING_CONST) { return "ERROR"; }
         return currentToken.replace("\"", "");
 	}
+	
 	public String identifier(){
 		if (tokenType() != Constants.IDENTIFIER) { return "ERROR"; }
         return currentToken;
 	}
+	
 	private String getTypeText(){
 		if(tokenType() == Constants.KEYWORD) return "keyword";
 		else if(tokenType() == Constants.IDENTIFIER) return "identifier";
@@ -195,6 +200,7 @@ public class JackTokenizer {
 		else if(tokenType() == Constants.STRING_CONST) return "stringConstant";
 		return "Error";
 	}
+	
 	public String getTag(){
 		String temp = currentToken;
 		if(getTypeText().equals("stringConstant")){
@@ -205,8 +211,8 @@ public class JackTokenizer {
 		String text = ("<" + getTypeText() + "> " + temp + " </" + getTypeText() + ">");
 		return text;
 	}
+	
 	public void close() throws IOException{
 		scan.close();
-		//writer.close();
 	}
 }
